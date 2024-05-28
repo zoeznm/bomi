@@ -548,21 +548,205 @@ top: 20px;
   top: 520px;
   left: 1605px;
 }
-.card1 {
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100vw;
+  height: 500px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.card1, .card2 {
   position: absolute;
-  width: 300px;
-  left: 700px;
   top: 130px;
-  z-index: 1;
-}
-.card2 {
-  position: absolute;
   width: 300px;
-  left: 500px;
-  top: 160px;
-  
-  transform: rotate(-5deg);
+  height: 500px;
+  backface-visibility: hidden;
+
+} 
+
+.card1 {
+  z-index: 2;
+  transform: rotateY(0deg);  
+
 }
+
+.card2 {
+  z-index: 1;
+  transform: rotateY(180deg);
+
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+.card_2 {
+  width: 300px;
+  height: 500px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 500px;
+  z-index: 2;
+  
+}
+.card3, .card4 {
+  position: absolute;
+  top: 130px;
+  width: 300px;
+  height: 500px;
+  backface-visibility: hidden;
+  transform: rotate(-5deg);
+
+} */
+
+.card3 {
+  z-index: 2;
+  transform: rotateY(0deg);  
+  
+
+}
+
+.card4 {
+  z-index: 1;
+  transform: rotateY(180deg);
+  
+
+}
+.flipped1{
+  transform: rotateY(180deg);
+}
+.card_3 {
+  width: 300px;
+  height: 500px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: 910px;
+  transform: rotate(5deg);
+  z-index: 2;
+  
+}
+.card5, .card6 {
+  position: absolute;
+  top: 130px;
+  width: 300px;
+  height: 500px;
+  backface-visibility: hidden;
+  
+
+} 
+
+.card5 {
+  z-index: 2;
+  transform: rotateY(0deg);  
+  
+
+}
+
+.card6 {
+  z-index: 1;
+  transform: rotateY(180deg);
+  
+
+}
+.flipped2{
+  transform: rotateY(180deg);
+}
+.card_4 {
+  width: 300px;
+  height: 500px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 290px;
+  transform: rotate(-10deg);
+  z-index: 1;
+  
+}
+.card7, .card8 {
+  position: absolute;
+  top: 130px;
+  width: 300px;
+  height: 500px;
+  backface-visibility: hidden;
+  
+} 
+
+.card7 {
+  z-index: 2;
+  transform: rotateY(0deg);  
+  
+
+}
+
+.card8 {
+  z-index: 1;
+  transform: rotateY(180deg);
+  
+
+}
+.flipped3{
+  transform: rotateY(180deg);
+}
+.card_5 {
+  width: 300px;
+  height: 500px; 
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+  display: flex;
+  position: absolute;
+  top: 50px;
+  left: 1110px;
+  transform: rotate(10deg);
+  z-index: 1;
+  
+}
+.card9, .card10 {
+  position: absolute;
+  top: 130px;
+  width: 300px;
+  height: 500px;
+  backface-visibility: hidden;
+  
+} 
+
+.card9 {
+  z-index: 2;
+  transform: rotateY(0deg);  
+  
+
+}
+
+.card10 {
+  z-index: 1;
+  transform: rotateY(180deg);
+  
+
+}
+.flipped4{
+  transform: rotateY(180deg);
+}
+
+/* 
 .card3 {
   position: absolute;
   width: 300px;
@@ -585,7 +769,7 @@ top: 20px;
   top: 200px;
   transform: rotate(10deg);
   z-index: -1;
-}
+} */
 .red {
   width: 80px;
   height: 80px;

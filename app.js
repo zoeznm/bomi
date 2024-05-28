@@ -57,3 +57,29 @@ function toggleView() {
   }
   isSwitched = true; // 화면이 전환되었음을 표시
 }
+
+// ! 카드 뒤집기 _1번카드
+document.querySelector('.card-container').addEventListener('click', function() {
+  this.querySelector('.card').classList.toggle('flipped');
+});
+
+// ! 카드 뒤집기_2번카드
+document.querySelector('.card-container').addEventListener('click', function() {
+  this.querySelector('.card_2').classList.toggle('flipped1');
+});
+
+// ! 카드 뒤집기_3번카드
+document.querySelector('.card_3').addEventListener('click', function() {
+  this.querySelector('.card_3').classList.toggle('flipped2');
+});
+
+// ! 카드 뒤집기_4번카드
+document.querySelector('.card_4').addEventListener('click', function() {
+  this.querySelector('.card_4').classList.toggle('flipped3');
+});
+
+// ! 카드 뒤집기_5번카드
+document.querySelector('.card_5').addEventListener('click', function() {
+  this.querySelector('.card_5').classList.toggle('flipped4');
+});
+
