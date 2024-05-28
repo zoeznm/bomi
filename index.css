@@ -599,7 +599,6 @@ top: 20px;
   top: 10px;
   left: 500px;
   z-index: 2;
-  
 }
 .card3, .card4 {
   position: absolute;
@@ -613,6 +612,7 @@ top: 20px;
 
 .card3 {
   z-index: 2;
+
   transform: rotateY(0deg);  
   
 
@@ -620,12 +620,16 @@ top: 20px;
 
 .card4 {
   z-index: 1;
+
   transform: rotateY(180deg);
+  
   
 
 }
 .flipped1{
+
   transform: rotateY(180deg);
+ 
 }
 .card_3 {
   width: 300px;
