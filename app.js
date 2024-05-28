@@ -60,14 +60,23 @@ function toggleView() {
 
 // ! 카드 뒤집기 _1번카드
 document.querySelector('.card').addEventListener('click', function() {
-  this.classList.toggle('flipped');
+  if (this.classList.contains('flipped')) {
+    // If the card is already flipped, navigate to top.html
+    window.location.href = 'top.html';
+  } else {
+    // Otherwise, flip the card and bring it to the front
+    this.classList.add('flipped');
+    
+    // Reset z-index for all cards
+    document.querySelectorAll('.card-container .card').forEach(card => {
+      card.style.zIndex = 0;
+    });
 
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.style.zIndex = 0;
-  });
-
-  this.style.zIndex = 4;
+    // Set z-index for the clicked card
+    this.style.zIndex = 4;
+  }
 });
+
 
 // ! 카드 뒤집기_2번카드
 document.querySelector('.card_2').addEventListener('click', function() {

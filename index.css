@@ -564,7 +564,7 @@ top: 20px;
   z-index: 3;
 }
 
-.card1, .card2 {
+.card1,.card2 {
   position: absolute;
   top: 130px;
   width: 300px;
@@ -901,4 +901,5 @@ top: 20px;
   100% {transform: rotate(1deg);}
 
 }
+
 
