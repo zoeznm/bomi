@@ -101,21 +101,10 @@ h1 {
   width: 150px;
   height: 150px;
 }
-.airplane {
+.back{
   position: absolute;
   top: 2%;
   left: 5%;
   width: 250px;
   height: 120px;
-}
-a {
-  position: absolute;
-  font-family: "Jersey 20", sans-serif;
-  font-weight: 400;
-  font-style: normal; 
-  font-size: 2em;
-  text-align: center;
-  color: #232323;
-  text-shadow: -1px -1px 0 #FFFEF0, 1px -1px 0 #FFFEF0, -1px 1px 0 #FFFEF0, 1px 1px 0 #FFFEF0;
-  
 }
