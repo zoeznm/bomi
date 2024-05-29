@@ -25,6 +25,14 @@ font-style: normal; */
   text-decoration: none;
 }
 
+body {
+  background-color: #232323;
+}
+
+.building {
+  width: 80%;
+  height: 80%;
+}
 
 
 

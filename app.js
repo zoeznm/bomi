@@ -45,81 +45,90 @@ document.addEventListener('keydown', function(event) {
 });
 
 // ! 6번째 enter 키를 눌렀을 때 화면 전환되게 하기 
-function toggleView() {
-  const container = document.getElementById('container');
+// function toggleView() {
+//   const container = document.getElementById('container');
   
-  if (currentView === 'home') {
-    container.style.transform = 'translateX(-100vw)';
-    currentView = 'about';
-  } else {
-    container.style.transform = 'translateX(0)';
-    currentView = 'home';
-  }
-  isSwitched = true; // 화면이 전환되었음을 표시
-}
+//   if (currentView === 'home') {
+//     container.style.transform = 'translateX(-100vw)';
+//     currentView = 'about';
+//   } else {
+//     container.style.transform = 'translateX(0)';
+//     currentView = 'home';
+//   }
+//   isSwitched = true; // 화면이 전환되었음을 표시
+// }
+// ! 엔터키 top.html로 전환
+// document.addEventListener('keydown', function(event) {
+//   if (event.key === 'Enter') {
+//       enterKeyPressCount++;
+//       if (enterKeyPressCount === 6) {
+//           window.location.href = 'top.html';
+//       }
+//   }
+// });
 
 // ! 카드 뒤집기 _1번카드
-document.querySelector('.card').addEventListener('click', function() {
-  if (this.classList.contains('flipped')) {
-    // If the card is already flipped, navigate to top.html
-    window.location.href = 'top.html';
-  } else {
-    // Otherwise, flip the card and bring it to the front
-    this.classList.add('flipped');
+// document.querySelector('.card').addEventListener('click', function() {
+//   if (this.classList.contains('flipped')) {
+//     // If the card is already flipped, navigate to top.html
+//     window.location.href = 'top.html';
+//   } else {
+//     // Otherwise, flip the card and bring it to the front
+//     this.classList.add('flipped');
     
-    // Reset z-index for all cards
-    document.querySelectorAll('.card-container .card').forEach(card => {
-      card.style.zIndex = 0;
-    });
+//     // Reset z-index for all cards
+//     document.querySelectorAll('.card-container .card').forEach(card => {
+//       card.style.zIndex = 0;
+//     });
 
-    // Set z-index for the clicked card
-    this.style.zIndex = 4;
-  }
-});
+//     // Set z-index for the clicked card
+//     this.style.zIndex = 4;
+//   }
+// });
 
 
-// ! 카드 뒤집기_2번카드
-document.querySelector('.card_2').addEventListener('click', function() {
-  this.classList.toggle('flipped1');
+// // ! 카드 뒤집기_2번카드
+// document.querySelector('.card_2').addEventListener('click', function() {
+//   this.classList.toggle('flipped1');
 
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.style.zIndex = 0;
-  });
+//   document.querySelectorAll('.card-container').forEach(card => {
+//     card.style.zIndex = 0;
+//   });
 
-  this.style.zIndex = 4;
-});
+//   this.style.zIndex = 4;
+// });
 
-// ! 카드 뒤집기_3번카드
-document.querySelector('.card_3').addEventListener('click', function() {
-  this.classList.toggle('flipped2');
+// // ! 카드 뒤집기_3번카드
+// document.querySelector('.card_3').addEventListener('click', function() {
+//   this.classList.toggle('flipped2');
 
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.style.zIndex = 0;
-  });
+//   document.querySelectorAll('.card-container').forEach(card => {
+//     card.style.zIndex = 0;
+//   });
 
-  this.style.zIndex = 4;
-});
+//   this.style.zIndex = 4;
+// });
 
-// ! 카드 뒤집기_4번카드
-document.querySelector('.card_4').addEventListener('click', function() {
-  this.classList.toggle('flipped3');
+// // ! 카드 뒤집기_4번카드
+// document.querySelector('.card_4').addEventListener('click', function() {
+//   this.classList.toggle('flipped3');
 
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.style.zIndex = 0;
-  });
+//   document.querySelectorAll('.card-container').forEach(card => {
+//     card.style.zIndex = 0;
+//   });
 
-  this.style.zIndex = 4;
-});
+//   this.style.zIndex = 4;
+// });
 
-// ! 카드 뒤집기_5번카드
-document.querySelector('.card_5').addEventListener('click', function() {
-  this.classList.toggle('flipped4');
+// // ! 카드 뒤집기_5번카드
+// document.querySelector('.card_5').addEventListener('click', function() {
+//   this.classList.toggle('flipped4');
 
-  document.querySelectorAll('.card-container').forEach(card => {
-    card.style.zIndex = 0;
-  });
+//   document.querySelectorAll('.card-container').forEach(card => {
+//     card.style.zIndex = 0;
+//   });
 
-  this.style.zIndex = 4;
-});
+//   this.style.zIndex = 4;
+// });
 
 
