@@ -81,4 +81,3 @@ function getScreenAvg() {
   return Math.floor((bodyEl.clientWidth + bodyEl.clientHeight) * 0.5);
 }
 
-
