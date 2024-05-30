@@ -283,3 +283,18 @@ document.addEventListener('DOMContentLoaded', () => {
       return color;
   }
 });
+
+
+  // JavaScript를 사용하여 별을 생성하고 무작위 위치에 배치합니다.
+  function createStars() {
+    const numberOfStars = 100; // 생성할 별의 개수
+    const container = document.body;
+    for (let i = 0; i < numberOfStars; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      container.appendChild(star);
+    }
+  }
+  createStars();
