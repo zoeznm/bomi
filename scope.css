@@ -99,3 +99,7 @@ body, html {
 .btn:active {
   background-color: #888;
 }
+.scope.bigger {
+  width: 450px;
+  height: 450px;
+}
