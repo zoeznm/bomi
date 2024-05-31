@@ -131,9 +131,96 @@ h1 {
 }
 
 .controls {
+  position: absolute;
+  right: 3%;
+  height: 30%;
+  width: 27%;
   margin-top: 20px;
-  display: flex;
   gap: 10px;
+  flex-direction: column;
+  text-align: center;
+}
+
+#up {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+
+}
+#left {
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+#right {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+#down {
+  position: absolute;
+  bottom: 20%;
+  left: 15%;
+}
+.game-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px #0056b3;
+  transition: all 0.2s ease;
+}
+
+.game-button:active {
+  box-shadow: 0 2px #0056b3;
+  transform: translateY(2px);
+}
+
+.game-button:focus {
+  outline: none;
+}
+.restart-button {
+  background-color: red;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  box-shadow: 0 4px #a70505;
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 30%;
+  top: 50%;
+}
+.restart-button:active {
+  box-shadow: 0 2px #a70505;
+  transform: translateY(2px);
+}
+
+.restart-button:focus {
+  outline: none;
+}
+.save-button {
+  background-color: green;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  box-shadow: 0 4px #055421;
+  transition: all 0.2s ease;
+  position: absolute;
+  right: 15%;
+  top: 20%;
+}
+.save-button:active {
+  box-shadow: 0 2px #055421;
+  transform: translateY(2px);
+}
+
+.save-button:focus {
+  outline: none;
 }
 
 .btn {

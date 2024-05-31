@@ -188,48 +188,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 점 이동 함수
   function moveDot(dx, dy) {
-      const rect = scope.getBoundingClientRect();
-      const radius = rect.width / 2;
-      const dotRect = centerDot.getBoundingClientRect();
+    const rect = scope.getBoundingClientRect();
+    const radius = rect.width / 2;
+    const dotRect = centerDot.getBoundingClientRect();
 
-      let x = dotRect.left - rect.left + dx + dotRect.width / 2;
-      let y = dotRect.top - rect.top + dy + dotRect.height / 2;
+    let x = dotRect.left - rect.left + dx + dotRect.width / 2;
+    let y = dotRect.top - rect.top + dy + dotRect.height / 2;
 
-      // 원 안에서의 움직임 제한
-      const distance = Math.sqrt((x - radius) ** 2 + (y - radius) ** 2);
+    // 원 안에서의 움직임 제한
+    const distance = Math.sqrt((x - radius) ** 2 + (y - radius) ** 2);
 
-      if (distance <= radius) {
-          centerDot.style.left = `${(x / rect.width) * 100}%`;
-          centerDot.style.top = `${(y / rect.height) * 100}%`;
+    if (distance <= radius) {
+      centerDot.style.left = `${(x / rect.width) * 100}%`;
+      centerDot.style.top = `${(y / rect.height) * 100}%`;
 
-          // 십자선 위치 업데이트
-          updateCrosshair(x, y, radius);
+      // 십자선 위치 업데이트
+      updateCrosshair(x, y, radius);
 
-          // 점 위치 감지 및 정보 표시
-          let pointFound = false;
-          points.forEach(point => {
-              const pointRect = point.getBoundingClientRect();
-              const pointX = pointRect.left - rect.left + pointRect.width / 2;
-              const pointY = pointRect.top - rect.top + pointRect.height / 2;
+      // 점 위치 감지 및 정보 표시
+      let pointFound = false;
+      points.forEach(point => {
+        const pointRect = point.getBoundingClientRect();
+        const pointX = pointRect.left - rect.left + pointRect.width / 2;
+        const pointY = pointRect.top - rect.top + pointRect.height / 2;
 
-              const distance = Math.sqrt((x - pointX) ** 2 + (y - pointY) ** 2);
+        const distance = Math.sqrt((x - pointX) ** 2 + (y - pointY) ** 2);
 
-              if (distance < 5) { // 조준점과 점이 가까우면
-                  infoBox.style.display = 'flex';
-                  infoBox.textContent = 'Point detected!';
-                  pointFound = true;
-              }
-          });
+        if (distance < 5) { // 조준점과 점이 가까우면
+          infoBox.style.display = 'flex';
+          infoBox.textContent = 'Got it!!';
+          pointFound = true;
+        }
+      });
 
-          if (!pointFound) {
-              infoBox.style.display = 'none';
-          }
+      if (!pointFound) {
+        infoBox.style.display = 'none';
       }
+    }
   }
 
   function updateCrosshair(x, y, radius) {
-      crosshairVertical.style.left = `${x}px`;
-      crosshairHorizontal.style.top = `${y}px`;
+    crosshairVertical.style.left = `${x}px`;
+    crosshairHorizontal.style.top = `${y}px`;
   }
 
   // 방향 버튼 이벤트 리스너 추가
@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 키보드 이벤트 리스너 추가
   document.addEventListener('keydown', (event) => {
-    switch(event.key) {
+    switch (event.key) {
       case 'ArrowUp':
         moveDot(0, -moveStep);
         break;
@@ -264,59 +264,59 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 게임 초기화 함수
   function resetGame() {
-      // 현재 상태 초기화
-      centerDot.style.left = '50%';
-      centerDot.style.top = '50%';
-      crosshairVertical.style.left = '50%';
-      crosshairHorizontal.style.top = '50%';
+    // 현재 상태 초기화
+    centerDot.style.left = '50%';
+    centerDot.style.top = '50%';
+    crosshairVertical.style.left = '50%';
+    crosshairHorizontal.style.top = '50%';
 
-      // 랜덤 점 생성
-      createRandomPoints();
+    // 랜덤 점 생성
+    createRandomPoints();
 
-      // 정보 박스 숨기기
-      infoBox.style.display = 'none';
+    // 정보 박스 숨기기
+    infoBox.style.display = 'none';
   }
 
   // 랜덤 점 생성 함수
   function createRandomPoints() {
-      // 기존 랜덤 점 제거
-      points.forEach(point => point.remove());
-      points = [];
+    // 기존 랜덤 점 제거
+    points.forEach(point => point.remove());
+    points = [];
 
-      // 새로운 랜덤 점 생성
-      for (let i = 0; i < pointCount; i++) {
-          const point = document.createElement('div');
-          point.classList.add('point');
-          point.style.top = `${Math.random() * 100}%`;
-          point.style.left = `${Math.random() * 100}%`;
-          point.style.backgroundColor = getRandomColor();
-          scope.appendChild(point);
-          points.push(point);
-      }
+    // 새로운 랜덤 점 생성
+    for (let i = 0; i < pointCount; i++) {
+      const point = document.createElement('div');
+      point.classList.add('point');
+      point.style.top = `${Math.random() * 100}%`;
+      point.style.left = `${Math.random() * 100}%`;
+      point.style.backgroundColor = getRandomColor();
+      scope.appendChild(point);
+      points.push(point);
+    }
   }
 
   // 랜덤 색상 생성 함수
   function getRandomColor() {
-      const letters = '0123456789ABCDEF';
-      let color = '#';
-      for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
   }
 
   // 저장하기 기능 함수
   function saveInfoBox() {
-      if (infoBox.style.display === 'flex' && infoBox.textContent === 'Point detected!') {
-          const savedBoxes = savedBoxesContainer.children;
-          if (savedBoxes.length >= 5) {
-              savedBoxes[0].remove();
-          }
-          const newBox = document.createElement('div');
-          newBox.classList.add('saved-box');
-          newBox.textContent = infoBox.textContent;
-          savedBoxesContainer.appendChild(newBox);
+    if (infoBox.style.display === 'flex' && infoBox.textContent === 'Got it!!') {
+      const savedBoxes = savedBoxesContainer.children;
+      if (savedBoxes.length >= 5) {
+        savedBoxes[0].remove();
       }
+      const newBox = document.createElement('div');
+      newBox.classList.add('saved-box');
+      newBox.textContent = infoBox.textContent;
+      savedBoxesContainer.appendChild(newBox);
+    }
   }
 
   // JavaScript를 사용하여 별을 생성하고 무작위 위치에 배치합니다.
