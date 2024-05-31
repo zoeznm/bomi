@@ -191,6 +191,14 @@ document.addEventListener('DOMContentLoaded', () => {
     '▶AFRD_Bottom'
   ];
 
+  const linkOptions = [
+    'https://amomento.co/product/detail.html?product_no=771&cate_no=48&display_group=1',
+    'https://www.ourlegacy.com/treble-cut-washed-grey-torino-stripe',
+    'https://www.roa-hiking.com/en-kr/products/roa-clothing-hunting-shorts-black-j277278?variant=47460113678668',
+    'https://www.yproject.fr/shop/denim/snap-off-jeans-heavy-sw-blue',
+    'https://thegreatalfred.com/product/detail.html?product_no=136&cate_no=1&display_group=2'
+  ];
+
   // 초기화
   resetGame();
 
@@ -323,13 +331,18 @@ document.addEventListener('DOMContentLoaded', () => {
       if (savedBoxes.length >= 5) {
         savedBoxes[0].remove();
       }
+      const index = savedBoxes.length % textOptions.length;
       const newBox = document.createElement('div');
       newBox.classList.add('saved-box');
-      newBox.textContent = textOptions[savedBoxes.length % textOptions.length];
+      const link = document.createElement('a');
+      link.href = linkOptions[index];
+      link.textContent = textOptions[index];
+      newBox.appendChild(link);
       savedBoxesContainer.appendChild(newBox);
     }
   }
 });
+
 
 
 
