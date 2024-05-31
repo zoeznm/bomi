@@ -183,6 +183,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let points = [];
   const moveStep = 5; // 점 이동 단위 거리
 
+  const textOptions = [
+    '▶Amomento_Bottom',
+    '▶Our Legacy_Bottom',
+    '▶roa_Bottom',
+    '▶Yproject_Bottom',
+    '▶AFRD_Bottom'
+  ];
+
   // 초기화
   resetGame();
 
@@ -217,12 +225,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (distance < 5) { // 조준점과 점이 가까우면
           infoBox.style.display = 'flex';
           infoBox.textContent = 'Got it!!';
+          infoBox.setAttribute('data-detected', 'true');
           pointFound = true;
         }
       });
 
       if (!pointFound) {
         infoBox.style.display = 'none';
+        infoBox.removeAttribute('data-detected');
       }
     }
   }
@@ -275,6 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 정보 박스 숨기기
     infoBox.style.display = 'none';
+    infoBox.removeAttribute('data-detected');
   }
 
   // 랜덤 점 생성 함수
@@ -307,17 +318,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 저장하기 기능 함수
   function saveInfoBox() {
-    if (infoBox.style.display === 'flex' && infoBox.textContent === 'Got it!!') {
+    if (infoBox.style.display === 'flex' && infoBox.getAttribute('data-detected') === 'true') {
       const savedBoxes = savedBoxesContainer.children;
       if (savedBoxes.length >= 5) {
         savedBoxes[0].remove();
       }
       const newBox = document.createElement('div');
       newBox.classList.add('saved-box');
-      newBox.textContent = infoBox.textContent;
+      newBox.textContent = textOptions[savedBoxes.length % textOptions.length];
       savedBoxesContainer.appendChild(newBox);
     }
   }
+});
+
+
+
 
   // JavaScript를 사용하여 별을 생성하고 무작위 위치에 배치합니다.
   function createStars() {
@@ -332,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   createStars();
-});
+
 
 // 별똥별
 document.addEventListener('DOMContentLoaded', () => {

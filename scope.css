@@ -225,19 +225,21 @@ h1 {
   left: 15%;
 }
 .game-button {
-  background-color: #007BFF;
+  /* background-color: #007BFF; */
+  background-color: #404040;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 4px #0056b3;
+  /* box-shadow: 0 4px #0056b3; */
+  box-shadow: 0 5px #262626;
   transition: all 0.2s ease;
 }
 
 .game-button:active {
-  box-shadow: 0 2px #0056b3;
+  box-shadow: 0 2px #262626;
   transform: translateY(2px);
 }
 
@@ -319,35 +321,26 @@ h1 {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 20px;
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
+  height: 600px;
 }
 
 .saved-box {
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 25px;
+  margin-bottom: 40px;
   padding: 5px;
   margin-right: 5px;
   margin-bottom: 20px;
-  width: inherit;
+  width: 250px;
   height: 80px;
   text-align: center;
-
   border-radius: 10px;
-  color: #fff; 
-  box-shadow:
-      0 0 10px var(--color4),
-      0 0 10px var(--color4),
-      0 0 8px var(--color4),
-      0 0 2px var(--color4),
-      0 0 8px var(--color4);
-  color: var(--color4);
+  background-color: #007BFF;
+  box-shadow: 0 7px #0056b3;
+  color: white; 
   font-size: 2em;
-  text-shadow:
-          0 0 10px var(--color4),
-          0 0 10px var(--color4)4,
-          0 0 10px var(--color4),
-          0 0 20px var(--color4),
-          0 0 80px var(--color4),
-          0 0 160px var(--color4);
   font-family: "Jersey 20", sans-serif;
   font-weight: 400;
   font-style: normal;         
