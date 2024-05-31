@@ -121,7 +121,7 @@ h1 {
   bottom: 20px;
   width: 200px;
   height: 100px;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(193, 255, 92, 0.8);
   display: none;
   justify-content: center;
   align-items: center;
@@ -157,4 +157,26 @@ h1 {
 .scope.bigger {
   width: 450px;
   height: 450px;
+}
+
+.saved-boxes-container {
+  position: absolute;
+  left: 10%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.saved-box {
+  background-color: lightgray;
+  padding: 5px;
+  border: 1px solid black;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: inherit;
+  height: 100px;
+  text-align: center;
 }

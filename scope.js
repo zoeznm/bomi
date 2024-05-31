@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const crosshairVertical = document.querySelector('.crosshair-vertical');
   const crosshairHorizontal = document.querySelector('.crosshair-horizontal');
   const infoBox = document.getElementById('info-box');
+  const savedBoxesContainer = document.getElementById('saved-boxes-container');
   const pointCount = 5; // 랜덤 점 개수
   let points = [];
   const moveStep = 5; // 점 이동 단위 거리
@@ -258,6 +259,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // 다시하기 버튼 이벤트 리스너 추가
   document.getElementById('restart').addEventListener('click', resetGame);
 
+  // 저장하기 버튼 이벤트 리스너 추가
+  document.getElementById('save').addEventListener('click', saveInfoBox);
+
   // 게임 초기화 함수
   function resetGame() {
       // 현재 상태 초기화
@@ -299,6 +303,20 @@ document.addEventListener('DOMContentLoaded', () => {
           color += letters[Math.floor(Math.random() * 16)];
       }
       return color;
+  }
+
+  // 저장하기 기능 함수
+  function saveInfoBox() {
+      if (infoBox.style.display === 'flex' && infoBox.textContent === 'Point detected!') {
+          const savedBoxes = savedBoxesContainer.children;
+          if (savedBoxes.length >= 5) {
+              savedBoxes[0].remove();
+          }
+          const newBox = document.createElement('div');
+          newBox.classList.add('saved-box');
+          newBox.textContent = infoBox.textContent;
+          savedBoxesContainer.appendChild(newBox);
+      }
   }
 
   // JavaScript를 사용하여 별을 생성하고 무작위 위치에 배치합니다.
