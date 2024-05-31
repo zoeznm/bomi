@@ -331,11 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 저장하기 기능 함수
   function saveInfoBox() {
-    if (infoBox.style.display === 'flex' && infoBox.getAttribute('data-detected') === 'true') {
-      if (saveCount >= 5) {
-        saveButton.disabled = true;
-        return;
-      }
+    if (infoBox.style.display === 'flex' && infoBox.getAttribute('data-detected') === 'true' && saveCount < 5) {
       const savedBoxes = savedBoxesContainer.children;
       if (savedBoxes.length >= 5) {
         savedBoxes[0].remove();
@@ -351,8 +347,12 @@ document.addEventListener('DOMContentLoaded', () => {
       newBox.appendChild(link);
       savedBoxesContainer.appendChild(newBox);
       saveCount++;
+      if (saveCount >= 5) {
+        saveButton.disabled = true;
+      }
     }
   }
+  
 });
 
 
