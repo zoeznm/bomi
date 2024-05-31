@@ -185,11 +185,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const moveStep = 5; // 점 이동 단위 거리
 
   const textOptions = [
-    '▶Amomento_Bottom',
-    '▶Our Legacy_Bottom',
-    '▶roa_Bottom',
-    '▶Yproject_Bottom',
-    '▶AFRD_Bottom'
+    '▶Amomento_DENIM SHORTS',
+    '▶Our Legacy_TREBLE CUT',
+    '▶roa_Canvas Shorts',
+    '▶Yproject_Snap Off Jeans',
+    '▶AFRD_VTG AFRD SHORTS'
   ];
 
   const linkOptions = [
