@@ -237,6 +237,24 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('down').addEventListener('click', () => moveDot(0, moveStep));
   document.getElementById('right').addEventListener('click', () => moveDot(moveStep, 0));
 
+  // 키보드 이벤트 리스너 추가
+  document.addEventListener('keydown', (event) => {
+    switch(event.key) {
+      case 'ArrowUp':
+        moveDot(0, -moveStep);
+        break;
+      case 'ArrowLeft':
+        moveDot(-moveStep, 0);
+        break;
+      case 'ArrowDown':
+        moveDot(0, moveStep);
+        break;
+      case 'ArrowRight':
+        moveDot(moveStep, 0);
+        break;
+    }
+  });
+
   // 다시하기 버튼 이벤트 리스너 추가
   document.getElementById('restart').addEventListener('click', resetGame);
 
@@ -282,8 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       return color;
   }
-});
-
 
   // JavaScript를 사용하여 별을 생성하고 무작위 위치에 배치합니다.
   function createStars() {
@@ -298,3 +314,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   createStars();
+});
