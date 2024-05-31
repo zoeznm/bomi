@@ -179,6 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const crosshairHorizontal = document.querySelector('.crosshair-horizontal');
   const infoBox = document.getElementById('info-box');
   const savedBoxesContainer = document.getElementById('saved-boxes-container');
+  const saveButton = document.getElementById('save');
   const pointCount = 5; // 랜덤 점 개수
   let points = [];
   const moveStep = 5; // 점 이동 단위 거리
@@ -198,6 +199,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'https://www.yproject.fr/shop/denim/snap-off-jeans-heavy-sw-blue',
     'https://thegreatalfred.com/product/detail.html?product_no=136&cate_no=1&display_group=2'
   ];
+
+  let saveCount = 0;
 
   // 초기화
   resetGame();
@@ -294,6 +297,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 정보 박스 숨기기
     infoBox.style.display = 'none';
     infoBox.removeAttribute('data-detected');
+    saveCount = 0;
+    saveButton.disabled = false;
   }
 
   // 랜덤 점 생성 함수
@@ -327,6 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // 저장하기 기능 함수
   function saveInfoBox() {
     if (infoBox.style.display === 'flex' && infoBox.getAttribute('data-detected') === 'true') {
+      if (saveCount >= 5) {
+        saveButton.disabled = true;
+        return;
+      }
       const savedBoxes = savedBoxesContainer.children;
       if (savedBoxes.length >= 5) {
         savedBoxes[0].remove();
@@ -337,8 +346,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const link = document.createElement('a');
       link.href = linkOptions[index];
       link.textContent = textOptions[index];
+      link.style.color = 'black'; // 링크 색상 블랙
+      link.style.textDecoration = 'none'; // 텍스트 장식 없음
       newBox.appendChild(link);
       savedBoxesContainer.appendChild(newBox);
+      saveCount++;
     }
   }
 });
