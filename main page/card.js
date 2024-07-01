@@ -2,7 +2,7 @@
 document.querySelector('.card').addEventListener('click', function() {
   if (this.classList.contains('flipped')) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = 'spotlight.html';
+    window.location.href = '../page _ 1 top/spotlight.html';
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add('flipped');
@@ -22,7 +22,7 @@ document.querySelector('.card').addEventListener('click', function() {
 document.querySelector('.card_2').addEventListener('click', function() {
   if (this.classList.contains('flipped1')) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = 'scope.html';
+    window.location.href = '../page _ 2 bottom/scope.html';
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add('flipped1');
@@ -41,7 +41,7 @@ document.querySelector('.card_2').addEventListener('click', function() {
 document.querySelector('.card_3').addEventListener('click', function() {
   if (this.classList.contains('flipped2')) {
     // If the card is already flipped, navigate to top.html
-    window.location.href = 'index.html';
+    window.location.href = '../page _ 3 bag/index.html';
   } else {
     // Otherwise, flip the card and bring it to the front
     this.classList.add('flipped2');
