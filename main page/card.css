@@ -32,12 +32,9 @@
 	right: 0;
 	cursor: pointer;
 }
-.container {
-  display: flex;
-  width: 200vw; /* 두 개의 섹션을 포함할 수 있게 설정 */
-  transition: transform 0.5s ease-in-out;
-}
+
 .section2 {
+  width: 100vw;
   background-color: black;
   position: absolute;
   right: 0;
@@ -83,28 +80,29 @@ top: 20px;
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 20px;
+  top: 5vw;
   left: 800px;
 }
 .img1 {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 700px;
+  top: 46vw;
+  z-index: 1000;
   left: 800px;
 }
 .img2 {
   position: absolute;
   width: 100px;
   height: 100px;
- top: 20px;
+  top: 5vw;
  left: 50px;
 }
 .img3 {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 700px;
+  top: 46vw;
   left: 1550px;
  }
  .img4 {
@@ -113,7 +111,7 @@ top: 20px;
   height: 100px;
   width: 110px;
   height: 110px;
-  top: 700px;
+  top: 46vw;
   left: 50px;
  }
  .img5 {
@@ -122,85 +120,88 @@ top: 20px;
   height: 100px;
   width: 110px;
   height: 110px;
-  top: 20px;
+  top: 5vw;
   left: 1550px;
  }
  .img6 {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 350px;
+  top: 25vw;
+
   left: 50px;
  }
  .img7 {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 350px;
+  top: 25vw;
   left: 1550px;
  }
 .long-line1 {
   position: absolute;
   width : 450px;
   border:1px color= silver;
-  top: 70px;
+  top: 8vw;
+
   left: 250px;
 }
 .long-line2 {
   position: absolute;
   width : 450px;
   border:1px color= silver;
-  top: 70px;
+  top: 8vw;
   left: 1000px;
 }
 .long-line3 {
   position: absolute;
   width : 450px;
   border:1px color= silver;
-  top: 750px;
+  top: 49vw;
   left: 250px;
 }
 .long-line4 {
   position: absolute;
   width : 450px;
   border:1px color= silver;
-  top: 750px;
+  top: 49vw;
   left: 1000px;
 }
 .short-line1 {
   position: absolute;
   height : 150px;
   border:1px color= silver;
-  top: 150px;
+  top: 12vw;
   left: 100px;
 }
 .short-line2 {
   position: absolute;
   height : 150px;
   border:1px color= silver;
-  top: 520px;
+top: 34vw;
   left: 100px;
 }
 .short-line3 {
   position: absolute;
   height : 150px;
   border:1px color= silver;
-  top: 150px;
+  top: 12vw;
   left: 1605px;
 }
 .short-line4 {
   position: absolute;
   height : 150px;
   border:1px color= silver;
-  top: 520px;
+  top: 34vw;
   left: 1605px;
 }
 .card-container {
+  margin-top: 5vw;
   perspective: 1000px;
 }
 
 .card {
-  width: 100vw;
+  width: 18vw;
   height: 500px; 
   position: relative;
   transform-style: preserve-3d;
@@ -221,12 +222,14 @@ top: 20px;
 } 
 
 .card1 {
+  width: 18vw;
   z-index: 2;
   transform: rotateY(0deg);  
 
 }
 
 .card2 {
+  width: 18vw;
   z-index: 1;
   transform: rotateY(180deg);
 
@@ -236,7 +239,7 @@ top: 20px;
   transform: rotateY(180deg);
 }
 .card_2 {
-  width: 300px;
+  width: 18vw;
   height: 500px; 
   position: relative;
   transform-style: preserve-3d;
@@ -244,7 +247,7 @@ top: 20px;
   display: flex;
   position: absolute;
   top: 10px;
-  left: 500px;
+  left: -13vw;
   z-index: 2;
 }
 .card3, .card4 {
@@ -257,7 +260,8 @@ top: 20px;
 
 } */
 
-.card3 {
+.card3 {  
+  width: 18vw;
   z-index: 2;
 
   transform: rotateY(0deg);  
@@ -267,14 +271,14 @@ top: 20px;
 
 .card4 {
   z-index: 1;
-
+  width: 18vw;
   transform: rotateY(180deg);
   
   
 
 }
 .flipped1{
-
+  width: 18vw;
   transform: rotateY(180deg);
  
 }
@@ -287,7 +291,7 @@ top: 20px;
   display: flex;
   position: absolute;
   top: 10px;
-  left: 910px;
+  left: 13vw;
   transform: rotate(5deg);
   z-index: 2;
   
@@ -303,6 +307,7 @@ top: 20px;
 } 
 
 .card5 {
+  width: 18vw;
   z-index: 2;
   transform: rotateY(0deg);  
   
@@ -310,6 +315,7 @@ top: 20px;
 }
 
 .card6 {
+  width: 18vw;
   z-index: 1;
   transform: rotateY(180deg);
   
@@ -327,7 +333,7 @@ top: 20px;
   display: flex;
   position: absolute;
   top: 50px;
-  left: 290px;
+  left: -25vw;
   transform: rotate(-10deg);
   z-index: 1;
   
@@ -342,6 +348,7 @@ top: 20px;
 } 
 
 .card7 {
+  width: 18vw;
   z-index: 2;
   transform: rotateY(0deg);  
   
@@ -349,6 +356,7 @@ top: 20px;
 }
 
 .card8 {
+  width: 18vw;
   z-index: 1;
   transform: rotateY(180deg);
   
@@ -366,7 +374,7 @@ top: 20px;
   display: flex;
   position: absolute;
   top: 50px;
-  left: 1110px;
+  left: 25vw;
   transform: rotate(10deg);
   z-index: 1;
   
@@ -381,6 +389,7 @@ top: 20px;
 } 
 
 .card9 {
+  width: 18vw;
   z-index: 2;
   transform: rotateY(0deg);  
   
@@ -388,6 +397,7 @@ top: 20px;
 }
 
 .card10 {
+  width: 18vw;
   z-index: 1;
   transform: rotateY(180deg);
   
