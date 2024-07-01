@@ -200,9 +200,9 @@ input[type=text]:focus-visible {
 .enterzone {
 position: absolute;
 background-color: black;
-padding: 100px 100px 100px 100px;
+padding: 150px 150px 150px 240px;
 top: 65%;
-left: 44%;
+left: 40%;
 color: white;  
 font-family: "Jersey 15", sans-serif;
 font-size: 20px;
@@ -212,6 +212,7 @@ font-size: 20px;
   justify-content: space-between;
   top: 0;
   left: 0;
+ padding-top: 20px;
 }
 
 .enterzone > p:nth-child(1) {
