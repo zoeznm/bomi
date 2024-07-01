@@ -39,12 +39,12 @@ document.querySelector('.card_2').addEventListener('click', function() {
 
 // ! 카드 뒤집기_3번카드
 document.querySelector('.card_3').addEventListener('click', function() {
-  if (this.classList.contains('flipped1')) {
+  if (this.classList.contains('flipped2')) {
     // If the card is already flipped, navigate to top.html
     window.location.href = 'index.html';
   } else {
     // Otherwise, flip the card and bring it to the front
-    this.classList.add('flipped1');
+    this.classList.add('flipped2');
     
     // Reset z-index for all cards
     document.querySelectorAll('.card-container .card_3').forEach(card => {
