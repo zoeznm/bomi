@@ -47,7 +47,7 @@ document.addEventListener('keydown', function(event) {
 document.addEventListener('DOMContentLoaded', () => {
   const inputContainer = document.getElementById('input-container');
   const enterZone = document.querySelector('.enterzone');
-  const words = ["wishlist", "lemaire", "amomento", "heritagefloss", "032c", "kapital" , "THX☻"];
+  const words = ["wishlist", "lemaire", "amomento", "heritagefloss", "032c", "kapital", "THX☻"];
   const infoTexts = [
     '<span>▶ <a href="https://www.lemaire.fr/products/mini-fortune-croissant-bag-soft-nappa-leather-dark-chocolate" target="_blank">lemaire</a> &nbsp; : MINI FORTUNE CROISSANT BAG</span>',
     '<span>▶ <a href="https://example.com/amomento" target="_blank">amomento</a> &nbsp; : HAND MADE BIG CROCHET BAG</span>',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     '<span>▶ <a href="https://example.com/032c" target="_blank">032c</a> &nbsp; : \'TEAM\' TAG SHOULDER BAG</span>',
     '<span>▶ <a href="https://example.com/kapital" target="_blank">kapital</a> &nbsp; : 箔キャンバス　ブリックツールBAG</span>'
   ];
-  
+
   const clickText = "click the text";
   let index = 0;
 
@@ -90,15 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
             enterZone.style.display = 'block';
           }
         } else {
-          // Incorrect input: Show alert and clear input
+          // Incorrect input: Show alert and keep the input box
           alert('다시 쓰세요!');
           newInput.value = ''; // Clear input value
+          newInput.focus(); // Focus back on the input
         }
       }
     });
   }
 
-  // Call createNewInput() once to create the initial input box
+  // Initial setup: hide enterZone and create the first input box
+
   createNewInput();
 });
 
