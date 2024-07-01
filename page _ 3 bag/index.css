@@ -433,3 +433,14 @@ font-size: 20px;
 	border: 1px solid black;
 	box-shadow: 3px 3px var(--color7);
 }
+.back {
+  position: absolute;
+  color: white;
+  top: 10%;
+  left: 3%;
+  font-size: 3em;
+  font-family: 'Jersey 15';
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+}
