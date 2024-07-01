@@ -23,6 +23,10 @@
   margin: 0;
   -tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
+a {
+  color: white;
+  text-decoration: none;
+}
 
 body {
   min-height: 100vh;
@@ -128,32 +132,48 @@ top: 35%;
   cursor: pointer;
 }
 
+/* !  중요한 부분  ! */
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin-top: 160px;
+}
 
 input[type=text] {
   --w: 1ch;   /* control the width for each letter */
   --g: .15em; /* the gap between letters */
   --b: 2px;   /* the border thickness */
-  --n: 8;     /* the number of letters */
   --c: white;
   font-size: 70px;
   line-height: 1.5; /* control the height */
   letter-spacing: var(--w);
   font-family: monospace;
-  width: calc(var(--n)*(1ch + var(--w)));
-  padding-left: calc((var(--w) - var(--g))/2);
-  clip-path: inset(0 calc(var(--w)/2) 0 0);
+  width: calc(var(--n) * (1ch + var(--w)));
+  padding-left: calc((var(--w) - var(--g)) / 2);
+  clip-path: inset(0 calc(var(--w) / 2) 0 0);
   background:
     repeating-linear-gradient(90deg,
-      var(--c) 0 var(--b),var(--c) 0 calc(1ch + var(--w) - var(--g) - var(--b)),
-      var(--c) 0 calc(1ch + var(--w) - var(--g)),black 0 2ch),
-    conic-gradient(at calc(100% - var(--g) - 1px) var(--b),var(--c) 75%,var(--c) 0) 
-     0 0/calc(1ch + var(--w)) calc(100% - var(--b));
+      var(--c) 0 var(--b), var(--c) 0 calc(1ch + var(--w) - var(--g) - var(--b)),
+      var(--c) 0 calc(1ch + var(--w) - var(--g)), black 0 2ch),
+    conic-gradient(at calc(100% - var(--g) - 1px) var(--b), var(--c) 75%, var(--c) 0)
+      0 0 / calc(1ch + var(--w)) calc(100% - var(--b));
   border: none;
   outline: 0;
-  position: absolute;
-  top: 37%;
-  left: 30%;
+  position: relative;
+  margin: 10px 0;
 }
+
+input[type=text].invalid {
+  background-color: red; /* Red background for invalid input */
+}
+
+input[type=text]:focus-visible {
+  --c: white;
+}
+
 .title{
   font-family: "Jersey 15", sans-serif;
   font-weight: 100;
@@ -179,9 +199,6 @@ input[type=text] {
 .title2{
   color: white;
 }
-input[type=text]:focus-visible {
-  --c:white;
-}
 .title3 {
   font-size: 40px;
   color: white;
@@ -199,9 +216,9 @@ input[type=text]:focus-visible {
 }
 .enterzone {
 position: absolute;
-background-color: black;
-padding: 150px 150px 150px 240px;
-top: 65%;
+width: 30vw;
+height: 30vh;
+top: 62%;
 left: 40%;
 color: white;  
 font-family: "Jersey 15", sans-serif;
@@ -212,30 +229,55 @@ font-size: 20px;
   justify-content: space-between;
   top: 0;
   left: 0;
- padding-top: 20px;
+ padding-top: 30px;
 }
 
 .enterzone > p:nth-child(1) {
+  font-size: 30px;
   position: absolute;
   padding: 10px 10px 10px 10px;
 }
+
 .enterzone > p:nth-child(2) {
   position: absolute;
-  padding: 45px 10px 10px 10px;
+  margin-top: 55px;
+  padding: 0px 10px 10px 10px;
+}
+#text2 > a:hover {
+  color: #80faa3;
 }
 .enterzone > p:nth-child(3) {
   position: absolute;
-  padding: 85px 10px 10px 10px;
+  margin-top: 95px;
+  padding: 0px 10px 10px 10px;
+}
+#text3 > a:hover {
+  color: #0ab4fc;
 }
 .enterzone > p:nth-child(4) {
   position: absolute;
-  padding: 125px 10px 10px 10px;
+  margin-top: 135px;
+  padding: 0px 10px 10px 10px;
+}
+#text4 > a:hover {
+  color: #ffb3df;
 }
 .enterzone > p:nth-child(5) {
   position: absolute;
-  padding: 165px 10px 10px 10px;
+  margin-top: 175px;
+  padding: 0px 10px 10px 10px;
 }
-
+#text5 > a:hover {
+  color: lightgoldenrodyellow;
+}
+.enterzone > p:nth-child(6) {
+  position: absolute;
+  margin-top: 215px;
+  padding: 0px 10px 10px 10px;
+}
+#text6> a:hover {
+  color: lightskyblue;
+}
 
 @keyframes my-animation1 {
   from {
@@ -391,517 +433,3 @@ font-size: 20px;
 	border: 1px solid black;
 	box-shadow: 3px 3px var(--color7);
 }
-/* 
-.section2 {
-  background-color: #232323;
-  position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  min-height: 100vh;
-}
-
-
-.menubar {
-  position: relative;
-  width: 100vw;
-  height: 60px;
-  display: grid;
-  justify-items: center;
-  align-content: space-around;
-  justify-content: space-between;
-  color: rgb(255, 255, 255);
-  display: flex;
-  font-size: 1.5em;
-}
-.logo {
-  position: absolute;
-  left: 40px;
-  top: 20px;
-}
-.logo2 {
-position: absolute;
-left: 48%;
-top: 20px;
-}
-.colorchange {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: var(--color7);
-  right: 40px;
-  top: 20px;
-}
-
-.img {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 20px;
-  left: 800px;
-}
-.img1 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 700px;
-  left: 800px;
-}
-.img2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
- top: 20px;
- left: 50px;
-}
-.img3 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 700px;
-  left: 1550px;
- }
- .img4 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  width: 110px;
-  height: 110px;
-  top: 700px;
-  left: 50px;
- }
- .img5 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  width: 110px;
-  height: 110px;
-  top: 20px;
-  left: 1550px;
- }
- .img6 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 350px;
-  left: 50px;
- }
- .img7 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 350px;
-  left: 1550px;
- }
-.long-line1 {
-  position: absolute;
-  width : 450px;
-  border:1px color= silver;
-  top: 70px;
-  left: 250px;
-}
-.long-line2 {
-  position: absolute;
-  width : 450px;
-  border:1px color= silver;
-  top: 70px;
-  left: 1000px;
-}
-.long-line3 {
-  position: absolute;
-  width : 450px;
-  border:1px color= silver;
-  top: 750px;
-  left: 250px;
-}
-.long-line4 {
-  position: absolute;
-  width : 450px;
-  border:1px color= silver;
-  top: 750px;
-  left: 1000px;
-}
-.short-line1 {
-  position: absolute;
-  height : 150px;
-  border:1px color= silver;
-  top: 150px;
-  left: 100px;
-}
-.short-line2 {
-  position: absolute;
-  height : 150px;
-  border:1px color= silver;
-  top: 520px;
-  left: 100px;
-}
-.short-line3 {
-  position: absolute;
-  height : 150px;
-  border:1px color= silver;
-  top: 150px;
-  left: 1605px;
-}
-.short-line4 {
-  position: absolute;
-  height : 150px;
-  border:1px color= silver;
-  top: 520px;
-  left: 1605px;
-}
-.card-container {
-  perspective: 1000px;
-}
-
-.card {
-  width: 100vw;
-  height: 500px; 
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-}
-
-.card1,.card2 {
-  position: absolute;
-  top: 130px;
-  width: 300px;
-  height: 500px;
-  backface-visibility: hidden;
-
-} 
-
-.card1 {
-  z-index: 2;
-  transform: rotateY(0deg);  
-
-}
-
-.card2 {
-  z-index: 1;
-  transform: rotateY(180deg);
-
-}
-
-.flipped {
-  transform: rotateY(180deg);
-}
-.card_2 {
-  width: 300px;
-  height: 500px; 
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  display: flex;
-  position: absolute;
-  top: 10px;
-  left: 500px;
-  z-index: 2;
-}
-.card3, .card4 {
-  position: absolute;
-  top: 130px;
-  width: 300px;
-  height: 500px;
-  backface-visibility: hidden;
-  transform: rotate(-5deg);
-
-} 
-
-.card3 {
-  z-index: 2;
-
-  transform: rotateY(0deg);  
-  
-
-}
-
-.card4 {
-  z-index: 1;
-
-  transform: rotateY(180deg);
-  
-  
-
-}
-.flipped1{
-
-  transform: rotateY(180deg);
- 
-}
-.card_3 {
-  width: 300px;
-  height: 500px; 
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  display: flex;
-  position: absolute;
-  top: 10px;
-  left: 910px;
-  transform: rotate(5deg);
-  z-index: 2;
-  
-}
-.card5, .card6 {
-  position: absolute;
-  top: 130px;
-  width: 300px;
-  height: 500px;
-  backface-visibility: hidden;
-  
-
-} 
-
-.card5 {
-  z-index: 2;
-  transform: rotateY(0deg);  
-  
-
-}
-
-.card6 {
-  z-index: 1;
-  transform: rotateY(180deg);
-  
-
-}
-.flipped2{
-  transform: rotateY(180deg);
-}
-.card_4 {
-  width: 300px;
-  height: 500px; 
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  display: flex;
-  position: absolute;
-  top: 50px;
-  left: 290px;
-  transform: rotate(-10deg);
-  z-index: 1;
-  
-}
-.card7, .card8 {
-  position: absolute;
-  top: 130px;
-  width: 300px;
-  height: 500px;
-  backface-visibility: hidden;
-  
-} 
-
-.card7 {
-  z-index: 2;
-  transform: rotateY(0deg);  
-  
-
-}
-
-.card8 {
-  z-index: 1;
-  transform: rotateY(180deg);
-  
-
-}
-.flipped3{
-  transform: rotateY(180deg);
-}
-.card_5 {
-  width: 300px;
-  height: 500px; 
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 1.5s;
-  display: flex;
-  position: absolute;
-  top: 50px;
-  left: 1110px;
-  transform: rotate(10deg);
-  z-index: 1;
-  
-}
-.card9, .card10 {
-  position: absolute;
-  top: 130px;
-  width: 300px;
-  height: 500px;
-  backface-visibility: hidden;
-  
-} 
-
-.card9 {
-  z-index: 2;
-  transform: rotateY(0deg);  
-  
-
-}
-
-.card10 {
-  z-index: 1;
-  transform: rotateY(180deg);
-  
-
-}
-.flipped4{
-  transform: rotateY(180deg);
-}
-
-
-
-.card3 {
-  position: absolute;
-  width: 300px;
-  left: 910px;
-  top: 160px;
-  transform: rotate(5deg);
-}
-.card4 {
-  position: absolute;
-  width: 300px;
-  left: 300px;
-  top: 200px;
-  transform: rotate(-10deg);
-  z-index: -1;
-}
-.card5 {
-  position: absolute;
-  width: 300px;
-  left: 1110px;
-  top: 200px;
-  transform: rotate(10deg);
-  z-index: -1;
-} 
-.red {
-  width: 80px;
-  height: 80px;
-  background: orangered;
-  box-shadow: 0px 0px 10px 5px orangered;
-}
-.orange {
-  left: 10px;
-  width: 60px;
-  height: 60px;
-  background: orange;
-  box-shadow: 0px 0px 12px 6px orange;
-}
-.gold {
-  left: 18px;
-  width: 45px;
-  height: 45px;
-  background: gold;
-  box-shadow: 0px 0px 9px 4px gold;
-}
-.white {
-  left: 22px;
-  width: 35px;
-  height: 35px;
-  background: lightyellow;
-  box-shadow: 0px 0px 9px 4px lightyellow;
-}
-.blue {
-  left: 32px;
-  width: 15px;
-  height: 15px;
-  background: darkblue;
-  box-shadow: 0px 0px 15px 10px darkblue;
-}
-.black {
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  bottom: -50px;
-  background: black;
-  box-shadow: 0px 0px 15px 10px black;
-}
-.base {
-  border-radius: 50%;
-  position: absolute;
-}
-.flame-wrapper {
-  position: absolute;
-  animation: flicker 3ms ease-in infinite;
-  top: 50%;
-  left: 60%;
-  left: 60px;
-
-}
-.flame {
-  bottom: 0;
-  position: absolute;
-  border-radius: 50% 0% 50% 50%;
-  transform: rotate(-45deg);
-  
-}
-.red1 {
-  width: 80px;
-  height: 80px;
-  background: orangered;
-  box-shadow: 0px 0px 10px 5px orangered;
-}
-.orange1 {
-  left: 10px;
-  width: 60px;
-  height: 60px;
-  background: orange;
-  box-shadow: 0px 0px 12px 6px orange;
-}
-.gold1 {
-  left: 18px;
-  width: 45px;
-  height: 45px;
-  background: gold;
-  box-shadow: 0px 0px 9px 4px gold;
-}
-.white1 {
-  left: 22px;
-  width: 35px;
-  height: 35px;
-  background: lightyellow;
-  box-shadow: 0px 0px 9px 4px lightyellow;
-}
-.blue1 {
-  left: 32px;
-  width: 15px;
-  height: 15px;
-  background: darkblue;
-  box-shadow: 0px 0px 15px 10px darkblue;
-}
-.black1 {
-  left: 20px;
-  width: 40px;
-  height: 40px;
-  bottom: -50px;
-  background: black;
-  box-shadow: 0px 0px 15px 10px black;
-}
-.base {
-  border-radius: 50%;
-  position: absolute;
-}
-.flame-wrapper1 {
-  position: absolute;
-  animation: flicker 3ms ease-in infinite;
-  top: 50%;
-  left: 60%;
-  left: 60px;
-  left: 1560px;
-
-}
-
-@keyframes flicker {
-  0% {transform: rotate(-1deg);}
-  20% {transform: rotate(2deg) scaleY(1.05);}
-  40% {transform: rotate(-1deg);}
-  60% {transform: rotate(1deg);}
-  80% {transform: rotate(-1deg) scaleY(0.90);}
-  100% {transform: rotate(1deg);}
-
-}
-*/
-

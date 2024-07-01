@@ -44,91 +44,63 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-// ! 6번째 enter 키를 눌렀을 때 화면 전환되게 하기 
-// function toggleView() {
-//   const container = document.getElementById('container');
+document.addEventListener('DOMContentLoaded', () => {
+  const inputContainer = document.getElementById('input-container');
+  const enterZone = document.querySelector('.enterzone');
+  const words = ["wishlist", "lemaire", "amomento", "heritagefloss", "032c", "kapital" , "THX☻"];
+  const infoTexts = [
+    '<span>▶ <a href="https://www.lemaire.fr/products/mini-fortune-croissant-bag-soft-nappa-leather-dark-chocolate" target="_blank">lemaire</a> &nbsp; : MINI FORTUNE CROISSANT BAG</span>',
+    '<span>▶ <a href="https://example.com/amomento" target="_blank">amomento</a> &nbsp; : HAND MADE BIG CROCHET BAG</span>',
+    '<span>▶ <a href="https://example.com/heritagefloss" target="_blank">heritagefloss</a> &nbsp; : NYLON WASHER SPORTS BAG</span>',
+    '<span>▶ <a href="https://example.com/032c" target="_blank">032c</a> &nbsp; : \'TEAM\' TAG SHOULDER BAG</span>',
+    '<span>▶ <a href="https://example.com/kapital" target="_blank">kapital</a> &nbsp; : 箔キャンバス　ブリックツールBAG</span>'
+  ];
   
-//   if (currentView === 'home') {
-//     container.style.transform = 'translateX(-100vw)';
-//     currentView = 'about';
-//   } else {
-//     container.style.transform = 'translateX(0)';
-//     currentView = 'home';
-//   }
-//   isSwitched = true; // 화면이 전환되었음을 표시
-// }
-// ! 엔터키 top.html로 전환
-// document.addEventListener('keydown', function(event) {
-//   if (event.key === 'Enter') {
-//       enterKeyPressCount++;
-//       if (enterKeyPressCount === 6) {
-//           window.location.href = 'top.html';
-//       }
-//   }
-// });
+  const clickText = "click the text";
+  let index = 0;
 
-// ! 카드 뒤집기 _1번카드
-// document.querySelector('.card').addEventListener('click', function() {
-//   if (this.classList.contains('flipped')) {
-//     // If the card is already flipped, navigate to top.html
-//     window.location.href = 'top.html';
-//   } else {
-//     // Otherwise, flip the card and bring it to the front
-//     this.classList.add('flipped');
-    
-//     // Reset z-index for all cards
-//     document.querySelectorAll('.card-container .card').forEach(card => {
-//       card.style.zIndex = 0;
-//     });
+  // Function to create a new input box
+  function createNewInput() {
+    const newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.maxLength = words[index].length;
+    newInput.placeholder = words[index];
+    newInput.style.setProperty('--n', words[index].length);
+    inputContainer.appendChild(newInput);
+    newInput.focus(); // Focus the new input
 
-//     // Set z-index for the clicked card
-//     this.style.zIndex = 4;
-//   }
-// });
+    // Event listener to handle input submission
+    newInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent default behavior (form submission)
+        const currentText = newInput.value.trim().toLowerCase();
+        if (currentText === words[index]) {
+          // Show corresponding infoText in enterZone
+          const infoP = document.createElement('p');
+          infoP.className = 'enter1';
+          infoP.innerHTML = `${infoTexts[index]} &nbsp; : ${clickText}`;
+          enterZone.appendChild(infoP);
 
+          newInput.remove(); // Remove current input
+          index++;
+          if (index < words.length) {
+            createNewInput(); // Create next input
+          } else {
+            // Show enterZone when all inputs are correct
+            enterZone.style.display = 'block';
+          }
+        } else {
+          // Incorrect input: Show alert and clear input
+          alert('다시 쓰세요!');
+          newInput.value = ''; // Clear input value
+        }
+      }
+    });
+  }
 
-// // ! 카드 뒤집기_2번카드
-// document.querySelector('.card_2').addEventListener('click', function() {
-//   this.classList.toggle('flipped1');
+  // Call createNewInput() once to create the initial input box
+  createNewInput();
+});
 
-//   document.querySelectorAll('.card-container').forEach(card => {
-//     card.style.zIndex = 0;
-//   });
-
-//   this.style.zIndex = 4;
-// });
-
-// // ! 카드 뒤집기_3번카드
-// document.querySelector('.card_3').addEventListener('click', function() {
-//   this.classList.toggle('flipped2');
-
-//   document.querySelectorAll('.card-container').forEach(card => {
-//     card.style.zIndex = 0;
-//   });
-
-//   this.style.zIndex = 4;
-// });
-
-// // ! 카드 뒤집기_4번카드
-// document.querySelector('.card_4').addEventListener('click', function() {
-//   this.classList.toggle('flipped3');
-
-//   document.querySelectorAll('.card-container').forEach(card => {
-//     card.style.zIndex = 0;
-//   });
-
-//   this.style.zIndex = 4;
-// });
-
-// // ! 카드 뒤집기_5번카드
-// document.querySelector('.card_5').addEventListener('click', function() {
-//   this.classList.toggle('flipped4');
-
-//   document.querySelectorAll('.card-container').forEach(card => {
-//     card.style.zIndex = 0;
-//   });
-
-//   this.style.zIndex = 4;
-// });
 
 
