@@ -143,7 +143,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "build:dev": "webpack --mode=development"
   },
   "author": "",
   "license": "ISC",
