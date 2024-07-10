@@ -1,45 +1,4 @@
-import imgSrc1 from '../assets/img/building@3x.png';
-import imgSrc2 from '../assets/img/bird@3x.png';
-import imgSrc3 from '../assets/img/cloud@3x.png';
-import imgSrc4 from '../assets/img/cloud@3x.png';
-import imgSrc5 from '../assets/img/cloud2@3x.png';
-import imgSrc6 from '../assets/img/sun@3x.png';
-import imgSrc7 from '../assets/img/back@3x.png';
 
-const img1 = document.createElement('img');
-img1.src = imgSrc1;
-img1.alt = 'Image 1';
-document.body.appendChild(img1);
-
-const img2 = document.createElement('img');
-img2.src = imgSrc2;
-img2.alt = 'Image 2';
-document.body.appendChild(img2);
-
-const img3 = document.createElement('img');
-img3.src = imgSrc3;
-img3.alt = 'Image 3';
-document.body.appendChild(img3);
-
-const img4 = document.createElement('img');
-img1.src = imgSrc4;
-img1.alt = 'Image 4';
-document.body.appendChild(img4);
-
-const img5 = document.createElement('img');
-img2.src = imgSrc5;
-img2.alt = 'Image 5';
-document.body.appendChild(img5);
-
-const img6 = document.createElement('img');
-img3.src = imgSrc6;
-img3.alt = 'Image 6';
-document.body.appendChild(img6);
-
-const img7 = document.createElement('img');
-img1.src = imgSrc7;
-img1.alt = 'Image 7';
-document.body.appendChild(img7);
 
 const bodyEl = document.querySelector('body');
 const focusEl = document.querySelector('#focus');
