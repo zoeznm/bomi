@@ -3,12 +3,28 @@
   --color2: #d4bcfa;
   --color3: #404241;
   --color4: #7583ff;
+  /* 메인 배경 색상 */
+  --maincolor1 : ;
+  /* 슈프림 색상 */
+  --color5: #ed1c25;
+  --color6: #fff;
+  /* 로아 하이킹 색상 */
+  --color7: #40381C;
+  --color8: #927D3A;
+  /* 아크테릭스 색상 */
+  --color9: #6F705D;
+  --color10: #B7C2A1;
+  /* 아워레가시 색상 */
+  --color11: #25323A;
+  --color12: #F3F3F3;
 }
 span {
   text-decoration: underline;
 }
 body {
-  background-color: var(--color1);
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
   font-family: fixedsys, consolas, monospace;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -24,7 +40,7 @@ body {
   width: 100%;
   position: relative;
   border: 1px solid #000;
-  z-index: 9999;
+  z-index: 1;
 }
 
 .window .title {
@@ -48,7 +64,7 @@ body {
   float: right;
   border: outset 3px;
   line-height: 20px;
-  z-index: 5555;
+  z-index: 1;
 }
 
 .window .title .button:active {
@@ -87,7 +103,7 @@ body {
   right: 0px;
   padding: 15px 5px;
   background: #fff;
-  z-index: 5;
+  z-index: 1;
 }
 
 .icons .icon {
@@ -139,10 +155,8 @@ body {
   position: absolute;
   padding: 2px 4px 4px 2px;
   border: 1px solid #000;
-  width: 550px;
-  height: 300px;
-  top: 15%;
-  left: 15%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .maximize {
@@ -168,28 +182,6 @@ body {
   border: dotted 2px #555;
   background: rgba(0, 0, 0, 0);
 }
-
-#context-menu {
-  display: none;
-  position: absolute;
-  border: solid 1px #000;
-  width: 150px;
-  margin: -1px;
-  margin-top: 5px;
-  z-index: 999999999;
-  background: #fff;
-  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-#context-menu .context-item {
-  padding: 5px;
-  font-weight: 600;
-  padding: 5px;
-}
-#context-menu .context-item:active {
-  background: #000080;
-  color: #fff;
-}
 /* ------------------------------------------- */
 .window1 {
   background: #fff;
@@ -201,7 +193,7 @@ body {
 }
 
 .window1 .title1 {
-  background: var(--color2);
+  background: var(--color4);
   color: #333;
   text-align: center;
   line-height: 24px;
@@ -249,8 +241,9 @@ body {
 }
 
 .menubar1 .menuitem1:active {
-  background: var(--color2);
+  background: var(--color4);
   color: #333;
+  z-index: 99999;
 }
 
 .icons1 {
@@ -272,7 +265,7 @@ body {
 }
 
 .icon1:active > .text1 {
-  background: var(--color2);
+  background: var(--color4);
   color: #333;
 }
 
@@ -314,7 +307,7 @@ body {
   border: 1px solid #000;
   width: 550px;
   height: 300px;
-  top: 15%;
+  top: 20%;
   left: 15%;
 }
 
