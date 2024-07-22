@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 :root {
   --color1: #7c7c7a;
   --color2: #d4bcfa;
@@ -26,7 +28,8 @@ body {
   padding: 0;
   margin: 0;
   background-color: #fff;
-  font-family: fixedsys, consolas, monospace;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -246,7 +249,10 @@ body {
   color: #fff;
   z-index: 99999;
 }
-
+.supreme {
+  width: 120px;
+  height: 40px;
+}
 .icons1 {
   position: absolute;
   bottom: 0px;
@@ -260,11 +266,13 @@ body {
 .icons1 .icon1 {
   display: inline-block;
   margin: 00px 10px;
-  width: 80px;
+  width: 100px;
   font-size: 12px;
   text-align: center;
 }
-
+.text1 {
+  margin-left: 20px;
+}
 .icon1:active > .text1 {
   background: var(--color5);
   color: #fff;
@@ -399,7 +407,10 @@ body {
   background: var(--color7);
   color: #fff;
 }
-
+.roa {
+  width: 90px;
+  height: 70px;
+}
 .icons2 {
   position: absolute;
   bottom: 0px;
@@ -417,7 +428,9 @@ body {
   font-size: 12px;
   text-align: center;
 }
-
+.text2 {
+  margin-left: 20px;
+}
 .icon2:active > .text2 {
   background: var(--color7);
   color: #fff;
@@ -551,7 +564,10 @@ body {
   background: var(--color9);
   color: #fff;
 }
-
+.arcteryx {
+  width: 110px;
+  height: 65px;
+}
 .icons3 {
   position: absolute;
   bottom: 0px;
@@ -569,7 +585,9 @@ body {
   font-size: 12px;
   text-align: center;
 }
-
+.text3 {
+  margin-left: 25px;
+}
 .icon3:active > .text3 {
   background: var(--color9);
   color: #fff;
@@ -703,7 +721,10 @@ body {
   background: var(--color11);
   color: #fff;
 }
-
+.ourlegacy {
+  width: 150px;
+  height: 20px;
+}
 .icons4 {
   position: absolute;
   bottom: 0px;
@@ -717,11 +738,13 @@ body {
 .icons4 .icon4 {
   display: inline-block;
   margin: 00px 10px;
-  width: 80px;
+  width: 120px;
   font-size: 12px;
   text-align: center;
 }
-
+.text4 {
+  margin-left: 20px;
+}
 .icon4:active > .text4 {
   background: var(--color11);
   color: #fff;
