@@ -4,19 +4,20 @@
   --color3: #404241;
   --color4: #7583ff;
   /* 메인 배경 색상 */
-  --maincolor1 : ;
+  --maincolor1: #eede57;
+  --maincolor2: #949597;
   /* 슈프림 색상 */
-  --color5: #ed1c25;
-  --color6: #fff;
+  --color5: #b41e2a;
+  --color6: #f3b2b5;
   /* 로아 하이킹 색상 */
-  --color7: #40381C;
-  --color8: #927D3A;
+  --color7: #40381c;
+  --color8: #927d3a;
   /* 아크테릭스 색상 */
-  --color9: #6F705D;
-  --color10: #B7C2A1;
+  --color9: #6f705d;
+  --color10: #b7c2a1;
   /* 아워레가시 색상 */
-  --color11: #25323A;
-  --color12: #F3F3F3;
+  --color11: #25323a;
+  --color12: #f3f3f3;
 }
 span {
   text-decoration: underline;
@@ -35,7 +36,7 @@ body {
 }
 
 .window {
-  background: #fff;
+  background: var(--maincolor2);
   height: 100%;
   width: 100%;
   position: relative;
@@ -44,7 +45,7 @@ body {
 }
 
 .window .title {
-  background: var(--color2);
+  background: var(--maincolor1);
   color: #333;
   text-align: center;
   line-height: 24px;
@@ -92,7 +93,7 @@ body {
 }
 
 .menubar .menuitem:active {
-  background: var(--color2);
+  background: var(--maincolor1);
   color: #333;
 }
 
@@ -102,7 +103,7 @@ body {
   left: 0px;
   right: 0px;
   padding: 15px 5px;
-  background: #fff;
+  background: var(--maincolor2);
   z-index: 1;
 }
 
@@ -115,7 +116,7 @@ body {
 }
 
 .icon:active > .text {
-  background: var(--color2);
+  background: var(--maincolor1);
   color: #333;
 }
 
@@ -184,7 +185,7 @@ body {
 }
 /* ------------------------------------------- */
 .window1 {
-  background: #fff;
+  background: var(--color6);
   height: 100%;
   width: 100%;
   position: relative;
@@ -193,8 +194,8 @@ body {
 }
 
 .window1 .title1 {
-  background: var(--color4);
-  color: #333;
+  background: var(--color5);
+  color: #fff;
   text-align: center;
   line-height: 24px;
   height: 26px;
@@ -241,8 +242,8 @@ body {
 }
 
 .menubar1 .menuitem1:active {
-  background: var(--color4);
-  color: #333;
+  background: var(--color5);
+  color: #fff;
   z-index: 99999;
 }
 
@@ -252,7 +253,7 @@ body {
   left: 0px;
   right: 0px;
   padding: 15px 5px;
-  background: #fff;
+  background: var(--color6);
   z-index: 5;
 }
 
@@ -265,8 +266,8 @@ body {
 }
 
 .icon1:active > .text1 {
-  background: var(--color4);
-  color: #333;
+  background: var(--color5);
+  color: #fff;
 }
 
 .handle1 {
@@ -307,8 +308,9 @@ body {
   border: 1px solid #000;
   width: 550px;
   height: 300px;
-  top: 20%;
+  top: 15%;
   left: 15%;
+  z-index: 1;
 }
 
 .maximize1 {
@@ -337,7 +339,7 @@ body {
 /* ------------------------------------------- */
 
 .window2 {
-  background: #fff;
+  background: var(--color8);
   height: 100%;
   width: 100%;
   position: relative;
@@ -346,8 +348,8 @@ body {
 }
 
 .window2 .title2 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color7);
+  color: #fff;
   text-align: center;
   line-height: 24px;
   height: 26px;
@@ -394,8 +396,8 @@ body {
 }
 
 .menubar2 .menuitem2:active {
-  background: var(--color2);
-  color: #333;
+  background: var(--color7);
+  color: #fff;
 }
 
 .icons2 {
@@ -404,7 +406,7 @@ body {
   left: 0px;
   right: 0px;
   padding: 15px 5px;
-  background: #fff;
+  background: var(--color8);
   z-index: 5;
 }
 
@@ -417,8 +419,8 @@ body {
 }
 
 .icon2:active > .text2 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color7);
+  color: #fff;
 }
 
 .handle2 {
@@ -459,8 +461,9 @@ body {
   border: 1px solid #000;
   width: 550px;
   height: 300px;
-  top: 20%;
+  top: 15%;
   right: 15%;
+  z-index: 1;
 }
 
 .maximize2 {
@@ -488,7 +491,7 @@ body {
 }
 /* ------------------------------------------- */
 .window3 {
-  background: #fff;
+  background: var(--color10);
   height: 100%;
   width: 100%;
   position: relative;
@@ -497,8 +500,8 @@ body {
 }
 
 .window3 .title3 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color9);
+  color: #fff;
   text-align: center;
   line-height: 24px;
   height: 26px;
@@ -545,8 +548,8 @@ body {
 }
 
 .menubar3 .menuitem3:active {
-  background: var(--color2);
-  color: #333;
+  background: var(--color9);
+  color: #fff;
 }
 
 .icons3 {
@@ -555,7 +558,7 @@ body {
   left: 0px;
   right: 0px;
   padding: 15px 5px;
-  background: #fff;
+  background: var(--color10);
   z-index: 5;
 }
 
@@ -568,8 +571,8 @@ body {
 }
 
 .icon3:active > .text3 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color9);
+  color: #fff;
 }
 
 .handle3 {
@@ -610,8 +613,9 @@ body {
   border: 1px solid #000;
   width: 550px;
   height: 300px;
-  top: 60%;
+  top: 55%;
   left: 15%;
+  z-index: 1;
 }
 
 .maximize3 {
@@ -639,7 +643,7 @@ body {
 }
 /* ------------------------------------------- */
 .window4 {
-  background: #fff;
+  background: var(--color12);
   height: 100%;
   width: 100%;
   position: relative;
@@ -648,8 +652,8 @@ body {
 }
 
 .window4 .title4 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color11);
+  color: #fff;
   text-align: center;
   line-height: 24px;
   height: 26px;
@@ -696,8 +700,8 @@ body {
 }
 
 .menubar4 .menuitem4:active {
-  background: var(--color2);
-  color: #333;
+  background: var(--color11);
+  color: #fff;
 }
 
 .icons4 {
@@ -706,7 +710,7 @@ body {
   left: 0px;
   right: 0px;
   padding: 15px 5px;
-  background: #fff;
+  background: var(--color12);
   z-index: 5;
 }
 
@@ -719,8 +723,8 @@ body {
 }
 
 .icon4:active > .text4 {
-  background: var(--color2);
-  color: #333;
+  background: var(--color11);
+  color: #fff;
 }
 
 .handle4 {
@@ -761,8 +765,9 @@ body {
   border: 1px solid #000;
   width: 550px;
   height: 300px;
-  top: 60%;
+  top: 55%;
   right: 15%;
+  z-index: 1;
 }
 
 .maximize4 {
