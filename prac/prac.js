@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Draggable
-  var draggableElement = document.querySelector('.window-border');
-  var titleElement = document.querySelector('.title');
+  var draggableElement = document.querySelector('.window-border1');
+  var titleElement = document.querySelector('.title1');
 
   titleElement.addEventListener('mousedown', function(e) {
     var offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
@@ -20,18 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Maximize/Restore Button
-  var maxButton = document.getElementById('max');
+  var maxButton = document.getElementById('max1');
   maxButton.addEventListener('click', function() {
     if (maxButton.innerHTML == "&#11109;") {
       maxButton.innerHTML = "&#9650;";
     } else {
       maxButton.innerHTML = "&#11109;";
     }
-    document.querySelector('.window').classList.toggle('maximize');
+    document.querySelector('.window1').classList.toggle('maximize1');
   });
 
   // Resizable
-  var resizableElement = document.querySelector('.window-border');
+  var resizableElement = document.querySelector('.window-border1');
   var resizeHandles = {
     'nw': document.createElement('div'),
     'ne': document.createElement('div'),
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   for (var handle in resizeHandles) {
     var div = resizeHandles[handle];
-    div.className = 'resize-handle ' + handle;
+    div.className = 'resize-handle1 ' + handle;
     resizableElement.appendChild(div);
     div.addEventListener('mousedown', initResize);
   }
@@ -78,19 +78,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mousemove', doResize);
     document.addEventListener('mouseup', stopResize);
   }
-
-  // Context Menu
-  var windowElement = document.getElementById('window');
-  var contextMenu = document.getElementById('context-menu');
-  var linkElement = document.getElementById('link');
-
-  windowElement.addEventListener('click', function() {
-    linkElement.parentNode.insertBefore(contextMenu, linkElement.nextSibling);
-    contextMenu.style.left = windowElement.offsetLeft + 'px';
-    contextMenu.style.top = (windowElement.offsetTop + windowElement.offsetHeight + 4) + 'px';
-    contextMenu.style.position = 'absolute';
-    contextMenu.style.display = (contextMenu.style.display === 'block') ? 'none' : 'block';
-  });
 });
 // --------------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
