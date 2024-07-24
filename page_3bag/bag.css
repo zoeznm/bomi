@@ -158,16 +158,16 @@ input[type=text] {
     repeating-linear-gradient(90deg,
       var(--c) 0 var(--b), var(--c) 0 calc(1ch + var(--w) - var(--g) - var(--b)),
       var(--c) 0 calc(1ch + var(--w) - var(--g)), black 0 2ch),
-    conic-gradient(at calc(100% - var(--g) - 1px) var(--b), var(--c) 75%, var(--c) 0) 
+    conic-gradient(at calc(100% - var(--g) - 100px) var(--b), var(--c) 0%, var(--c) 0) 
     0 0/calc(1ch + var(--w)) calc(100% - var(--b));
   border: none;
-  outline: 0;
+  outline: 10px;
   position: relative;
   margin: 10px 0;
 }
 
 input[type=text]:focus-visible {
-  --c: white;
+  --c: var(--color7);
 }
 
 input.invalid {

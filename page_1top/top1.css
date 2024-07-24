@@ -99,7 +99,11 @@ body {
   background: var(--maincolor1);
   color: #333;
 }
-
+.back {
+  color: #000;
+  margin-right: 10px;
+  margin-left: 5px;
+}
 .icons {
   position: absolute;
   bottom: 0px;
