@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Follow on Hover</title>
+    <style>
+        .hover-div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            position: relative;
+            margin: 50px;
+        }
+
+        .follow-image {
+            position: absolute;
+            display: none;
+            width: 200px;
+            height: 300px;
+            pointer-events: none; /* Prevent the image from capturing mouse events */
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-div">Hover over me!</div>
+    <img src="../img/amomentoshoe.jpg" class="follow-image" id="followImage">
+
+    <script>
+        const hoverDiv = document.querySelector('.hover-div');
+        const followImage = document.getElementById('followImage');
+
+        hoverDiv.addEventListener('mouseover', () => {
+            followImage.style.display = 'block';
+        });
+
+        hoverDiv.addEventListener('mouseout', () => {
+            followImage.style.display = 'none';
+        });
+
+        hoverDiv.addEventListener('mousemove', (e) => {
+            followImage.style.left = `${e.pageX + 10}px`;
+            followImage.style.top = `${e.pageY + 10}px`;
+        });
+    </script>
+</body>
+</html>
