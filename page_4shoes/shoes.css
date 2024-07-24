@@ -99,3 +99,10 @@ button:hover {
   height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
+a {
+  font-size: 20px;
+  top: 10px;
+  left: 10px;
+  color: #333;
+  position: absolute;
+}
