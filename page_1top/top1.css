@@ -118,8 +118,13 @@ body {
   display: inline-block;
   margin: 00px 10px;
   width: 80px;
+  height: 20px;
   font-size: 12px;
   text-align: center;
+}
+.icons .icon img {
+  width: 50px;
+  height: 40px;
 }
 
 .icon:active > .text {
