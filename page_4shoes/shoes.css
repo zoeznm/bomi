@@ -106,3 +106,18 @@ a {
   color: #333;
   position: absolute;
 }
+.ptext1 {
+  font-size: 16px;
+  position: absolute;
+  top: 8px;
+  left: 26%;
+  margin-top: 10px;
+}
+.ptext2 {
+  font-size: 16px;
+  position: absolute;
+  top: 28%;
+  left: 27%;
+  margin-top: 10px;
+}
+
