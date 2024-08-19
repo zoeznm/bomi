@@ -60,15 +60,15 @@ button:hover {
 .follow-image4 {
   position: absolute;
   display: none;
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
 .follow-image5 {
   position: absolute;
   display: none;
-  width: 250px;
-  height: 150px;
+  width: 200px;
+  height: 300px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
 .follow-image6 {
@@ -82,15 +82,15 @@ button:hover {
   position: absolute;
   display: none;
   width: 250px;
-  height: 200px;
+  height: 150px;
   pointer-events: none; /* Prevent the image from capturing mouse events */
 }
 .follow-image8 {
   position: absolute;
   display: none;
   width: 250px;
-  height: 150px;
-  pointer-events: none; /* Prevent the image from capturing mouse events */
+  height: 200px;
+  pointer-events: none;/* Prevent the image from capturing mouse events */
 }
 .follow-image9 {
   position: absolute;
@@ -120,4 +120,11 @@ a {
   left: 27%;
   margin-top: 10px;
 }
-
+.hover-text {
+  display: none; /* 기본적으로 숨김 */
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  pointer-events: none; /* 텍스트가 마우스 이벤트를 받지 않도록 설정 */
+}
