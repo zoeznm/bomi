@@ -820,8 +820,75 @@ body {
   border: none;
   z-index: -999;
 }
-
 .ui-draggable-dragging4 {
   border: dotted 2px #555;
   background: rgba(0, 0, 0, 0);
+}
+.supremefolder {
+  display: flex;
+  width: 120px;
+  text-align: center;
+  justify-content: space-between;
+}
+.supremefolder > a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+.supremefolder > a > img {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 60px;
+  height: 50px;
+}
+.roafolder {
+  display: flex;
+  width: 120px;
+  text-align: center;
+  justify-content: space-between;
+}
+.roafolder > a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+.roafolder > a > img {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 60px;
+  height: 50px;
+}
+.arcteryxfolder {
+  display: flex;
+  width: 120px;
+  text-align: center;
+  justify-content: space-between;
+}
+.arcteryxfolder > a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+.arcteryxfolder > a > img {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 60px;
+  height: 50px;
+}
+.ourlegacyfolder {
+  display: flex;
+  width: 120px;
+  text-align: center;
+  justify-content: space-between;
+}
+.ourlegacyfolder > a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+.ourlegacyfolder > a > img {
+  margin-top: 30px;
+  margin-left: 20px;
+  width: 60px;
+  height: 50px;
 }
